@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Math
-%define         _subclass       Numerical
+%define		_class		Math
+%define		_subclass	Numerical
 %define		_subsubclass	RootFinding
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
