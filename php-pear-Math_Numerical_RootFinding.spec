@@ -32,7 +32,7 @@ Available Methods:
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Ten pakiet udostêpnia ró¿ne metody numeryczne do znajdowanai
+Ten pakiet udostêpnia ró¿ne metody numeryczne do znajdowania
 pierwiastków. Dostêpne metody to:
 - bisekcji
 - regula-falsi
