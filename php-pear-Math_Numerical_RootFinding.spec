@@ -8,13 +8,12 @@
 Summary:	%{_pearname} - numerical analysis root finding methods
 Summary(pl):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
-Release:	3
+Version:	0.3.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	2aa5cbd9153c4ce3f914a6e79427970a
-Patch0:		%{name}-path_fix.patch
+# Source0-md5:	3495ca09b22910b6b98ea8bd558fc7f9
 URL:		http://pear.php.net/package/Math_Numerical_RootFinding/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -45,7 +44,6 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -60,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/docs/*
+%doc %{_pearname}-%{version}/{README.txt,examples}
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/%{_subsubclass}
