@@ -5,8 +5,8 @@
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
 
-Summary:	%{_pearname} - Numerical analysis root finding methods
-#Summary(pl):	%{_pearname} -
+Summary:	%{_pearname} - numerical analysis root finding methods
+Summary(pl):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
 Release:	1
@@ -31,10 +31,16 @@ Available Methods:
 
 This class has in PEAR status: %{_status}.
 
-#%description -l pl
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl
+Ten pakiet udostêpnia ró¿ne metody numeryczne do znajdowanai
+pierwiastków. Dostêpne metody to:
+- bisekcji
+- regula-falsi
+- sta³ego przecinka
+- Newtona-Raphsona
+- siecznych.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
