@@ -1,0 +1,12 @@
+diff -burN php-pear-Math_Numerical_RootFinding-0.2.0.orig/Math_Numerical_RootFinding-0.2.0/Math/Numerical/RootFinding/falseposition.php php-pear-Math_Numerical_RootFinding-0.2.0/Math_Numerical_RootFinding-0.2.0/Math/Numerical/RootFinding/falseposition.php
+--- php-pear-Math_Numerical_RootFinding-0.2.0.orig/Math_Numerical_RootFinding-0.2.0/Math/Numerical/RootFinding/falseposition.php	2004-12-05 11:59:13.152387880 +0100
++++ php-pear-Math_Numerical_RootFinding-0.2.0/Math_Numerical_RootFinding-0.2.0/Math/Numerical/RootFinding/falseposition.php	2004-12-05 11:59:58.942426736 +0100
+@@ -30,7 +30,7 @@
+ /**
+  * Require bracketing method base class.
+  */
+-require_once 'Math/Numerical/RootFinding/bracketing.php';
++require_once 'Math/Numerical/RootFinding/Bracketing.php';
+ 
+ /**
+  * False Position method class.
