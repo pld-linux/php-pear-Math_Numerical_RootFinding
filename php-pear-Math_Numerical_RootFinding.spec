@@ -2,18 +2,18 @@
 %define		_class		Math
 %define		_subclass	Numerical
 %define		_subsubclass	RootFinding
-%define		_status		alpha
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
 
 Summary:	%{_pearname} - numerical analysis root finding methods
 Summary(pl):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
-Release:	3
+Version:	1.0.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	3495ca09b22910b6b98ea8bd558fc7f9
+# Source0-md5:	c7844e254e232f9bfa4ba53748a47045
 URL:		http://pear.php.net/package/Math_Numerical_RootFinding/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
