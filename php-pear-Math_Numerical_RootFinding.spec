@@ -6,7 +6,7 @@
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
 
 Summary:	%{_pearname} - numerical analysis root finding methods
-Summary(pl):	%{_pearname} - metody numeryczne znajdowania pierwiastk�w
+Summary(pl.UTF-8):   %{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	1
@@ -34,12 +34,12 @@ Available Methods:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ten pakiet udost�pnia r�ne metody numeryczne do znajdowania
-pierwiastk�w. Dost�pne metody to:
+%description -l pl.UTF-8
+Ten pakiet udostępnia różne metody numeryczne do znajdowania
+pierwiastków. Dostępne metody to:
 - bisekcji
 - regula-falsi
-- sta�ego przecinka
+- stałego przecinka
 - Newtona-Raphsona
 - siecznych.
 
