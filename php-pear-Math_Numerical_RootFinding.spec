@@ -6,7 +6,7 @@
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
 
 Summary:	%{_pearname} - numerical analysis root finding methods
-Summary(pl.UTF-8):   %{_pearname} - metody numeryczne znajdowania pierwiastków
+Summary(pl.UTF-8):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	1
