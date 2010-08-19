@@ -2,18 +2,19 @@
 %define		_class		Math
 %define		_subclass	Numerical
 %define		_subsubclass	RootFinding
-%define		_status		stable
+%define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}_%{_subsubclass}
-
+%define		subver	a1
+%define		rel		1
 Summary:	%{_pearname} - numerical analysis root finding methods
 Summary(pl.UTF-8):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	2
+Version:	1.1.0
+Release:	0.%{subver}.%{rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	c7844e254e232f9bfa4ba53748a47045
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
+# Source0-md5:	da5d0c4dbbd942aab57803d84cb6790a
 URL:		http://pear.php.net/package/Math_Numerical_RootFinding/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -48,10 +49,17 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
+mv docs/%{_pearname}/docs/examples .
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_examplesdir}/%{name}-%{version}}
 %pear_package_install
+
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+# don't care for tests
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,8 +67,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/*
+%doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/%{_subsubclass}
+
+%{_examplesdir}/%{name}-%{version}
