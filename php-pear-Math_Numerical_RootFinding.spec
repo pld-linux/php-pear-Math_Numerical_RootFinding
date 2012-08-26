@@ -2,7 +2,7 @@
 %define		_status		alpha
 %define		_pearname	Math_Numerical_RootFinding
 %define		subver	a2
-%define		rel		1
+%define		rel		2
 Summary:	%{_pearname} - numerical analysis root finding methods
 Summary(pl.UTF-8):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
@@ -16,7 +16,7 @@ URL:		http://pear.php.net/package/Math_Numerical_RootFinding/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:4.2.0
+Requires:	php(core) >= 4.2.0
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
