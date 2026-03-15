@@ -1,7 +1,7 @@
 %define		_status		alpha
 %define		_pearname	Math_Numerical_RootFinding
 %define		subver	a2
-%define		rel		2
+%define		rel		3
 Summary:	%{_pearname} - numerical analysis root finding methods
 Summary(pl.UTF-8):	%{_pearname} - metody numeryczne znajdowania pierwiastków
 Name:		php-pear-%{_pearname}
